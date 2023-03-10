@@ -5,6 +5,7 @@ import HTMLlogo from '../assets/HTMLlogo.png'
 import CSSlogo from '../assets/CSS3logo.png'
 import TWlogo from '../assets/TWlogo.png'
 import JSlogo from '../assets/JSlogo.png'
+import GITLogo from '../assets/GITlogo.png'
 import { motion } from 'framer-motion'
 import useMediaQuery from '../hooks/useMediaQuery'
 import Skill from '../components/Skill'
@@ -66,6 +67,21 @@ const MySkills = () => {
               <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[80px]"} zImg={"z-10"}/>              
             </div>
             </motion.div>
+            <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport= {{once: true, amount: 0.3}}
+                        transition={{ duration: 1.2 }}
+                        variants={{
+                            hidden: { opacity: 0, x: -200},
+                            visible: { opacity: 1, x: 0}
+                        }}
+                    >
+{/*Third line of skills - GIT*/}
+             <div className='flex justify-center w-full h-full mb-5 gap-5'>
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} zImg={"z-10"}/>                     
+            </div>
+            </motion.div>
           </div> )
           : (            
             <div className='flex flex-col items-center'>
@@ -74,12 +90,13 @@ const MySkills = () => {
                   <h2 className='text-6xl'>My Skills</h2>
                 </div>
               <div className='flex flex-wrap justify-center gap-7'>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"h-[160px]"} zImg={"z-10"}/>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"h-[115px]"} zImg={"z-10"}/>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"h-[140px]"} zImg={"z-10"}/>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"h-[150px]"} zImg={"z-10"}/>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[75px]"} smIMG={"h-[150px]"} zImg={"z-10"}/>
-                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[40px]"} smIMG={"h-[80px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"sm:w-[90px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"sm:w-[110px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"sm:w-[130px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[100px]"} smIMG={"sm:w-[150px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[60px]"} smIMG={"sm:w-[80px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={GITLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} zImg={"z-10"}/>
               </div>  
             </div>
           )}
