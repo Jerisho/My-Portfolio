@@ -15,7 +15,7 @@ const MySkills = () => {
 
   return (
     <section id="skills"  
-        className='flex flex-col justify-center items-center mt-[20px] md:mt-[50px]'
+        className='flex flex-col justify-center items-center mt-[20px] mb-[20px]'
         >
         { IsAboutXSmallScreen ? (
           <div>

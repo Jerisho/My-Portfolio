@@ -38,9 +38,10 @@ function App() {
         <Landing setSelectedPage = {setSelectedPage}/>
       </div>
       <DivSeparator/>
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full flex items-center justify-center">
         <MySkills />
       </div>
+      <DivSeparator/>
   </div>
   );
 }
