@@ -1,5 +1,4 @@
 import React from 'react'
-import DivSeparator from '../components/DivSeparator'
 import FBlogo from '../assets/FBlogo.png'
 import RClogo from '../assets/REACTlogo.png'
 import HTMLlogo from '../assets/HTMLlogo.png'
@@ -8,13 +7,14 @@ import TWlogo from '../assets/TWlogo.png'
 import JSlogo from '../assets/JSlogo.png'
 import { motion } from 'framer-motion'
 import useMediaQuery from '../hooks/useMediaQuery'
+import Skill from '../components/Skill'
 
 const MySkills = () => {
   const IsAboutXSmallScreen = useMediaQuery("(min-width: 1060px)")
 
   return (
     <section id="skills"  
-        className='flex flex-col justify-between mt-[20px] md:mt-[50px]'
+        className='flex flex-col justify-center items-center mt-[20px] md:mt-[50px]'
         >
         { IsAboutXSmallScreen ? (
           <div>
@@ -42,18 +42,11 @@ const MySkills = () => {
                             visible: { opacity: 1, x: 0}
                         }}
                     >
-            <div className='flex justify-center w-full h-full mb-5 gap-5'>
-              <div className='flex justify-center items-center w-32 h-32 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={HTMLlogo} alt="Image_HTML" className='w-[160px] z-10'></img>
-              </div>
-              <div className='flex justify-center items-center w-32 h-32 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={CSSlogo} alt="Image_CSS3" className='w-[115px] z-10'  />
-              </div>          <div className='flex justify-center items-center w-32 h-32 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={JSlogo} alt="Image_JS" className='w-[140px] z-10'  />
-              </div>         
+{/*First line of skills - HTML - CSS3 - JS*/}
+            <div className='flex justify-center w-full h-full mb-5 gap-5'>             
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[160px]"} zImg={"z-10"}/>
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[115px]"} zImg={"z-10"}/>           
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={JSlogo} alt="Image_JS" wImg={"w-[140px]"} zImg={"z-10"}/>        
             </div>
             </motion.div>
             <motion.div
@@ -66,46 +59,27 @@ const MySkills = () => {
                             visible: { opacity: 1, x: 0}
                         }}
                     >
-            <div className='flex justify-center w-full h-full mb-5 gap-5'>
-              <div className='flex justify-center items-center w-32 h-32 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={RClogo} alt="Image_REACT" className='w-[150px] z-10'  />
-              </div>
-              <div className='flex justify-center items-center w-20 h-20 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={TWlogo} alt="Image_TAILWIND" className='w-[150px] z-10'  />
-              </div>          
-              <div className='flex justify-center items-center w-32 h-32 sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue
-                hover:shadow-custom hover:shadow-sky-700'>
-                <img src={FBlogo} alt="Image_FIBEBASE" className='w-[80px] z-10'  />
-              </div>        
+{/*Second line of skills - React - Tailwind - Firebase*/}
+             <div className='flex justify-center w-full h-full mb-5 gap-5'>
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={RClogo} alt="Image_REACT" wImg={"w-[150px]"} zImg={"z-10"}/>           
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[150px]"} zImg={"z-10"}/>              
+              <Skill smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[80px]"} zImg={"z-10"}/>              
             </div>
             </motion.div>
-          </div> ) 
-          : (
+          </div> )
+          : (            
             <div className='flex flex-col items-center'>
+{/*When Not About XS Screen, view skills order HTML, CSS3, JS, REACT, TAILWIND, FIREBASE*/}
                 <div className='flex justify-center mb-12'>  
                   <h2 className='text-6xl'>My Skills</h2>
                 </div>
               <div className='flex flex-wrap justify-center gap-7'>
-              <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                <img src={HTMLlogo} alt="Image_HTML" className='w-[80px] sm:w-[160px] z-10'></img>
-              </div>
-              <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                <img src={CSSlogo} alt="Image_CSS3" className='w-[55px] sm:w-[115px] z-10'  />
-              </div>          
-              <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                <img src={JSlogo} alt="Image_JS" className='w-[70px] sm:w-[140px] z-10'  />
-              </div> 
-                <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                  <img src={RClogo} alt="Image_REACT" className='w-[75px] sm:w-[150px] z-10'  />
-                </div>
-                <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                  <img src={TWlogo} alt="Image_TAILWIND" className='w-[75px] sm:w-[150px] z-10'  />
-                </div>          
-                <div className='flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl bg-icon-blue'>
-                  <img src={FBlogo} alt="Image_FIBEBASE" className='w-[40px] sm:w-[80px] z-10'  />
-                </div>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"h-[160px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"h-[115px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"h-[140px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"h-[150px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[75px]"} smIMG={"h-[150px]"} zImg={"z-10"}/>
+                <Skill divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[40px]"} smIMG={"h-[80px]"} zImg={"z-10"}/>
               </div>  
             </div>
           )}
