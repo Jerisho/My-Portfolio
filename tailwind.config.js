@@ -29,6 +29,9 @@ module.exports = {
       },
       boxShadow: {
         "custom" : "0px 0px 34px -2px rgba(0,0,0,0.75)"
+      },
+      blur: {
+        "xs" : "0.7px"
       }
   }
   },

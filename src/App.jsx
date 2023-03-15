@@ -5,6 +5,7 @@ import useMediaQuery from './hooks/useMediaQuery';
 import Landing from "./scenes/Landing.jsx";
 import MySkills from "./scenes/MySkills.jsx";
 import DivSeparator from "./components/DivSeparator.jsx";
+import Projects from "./scenes/Projects.jsx";
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
       selectedPage={selectedPage} 
       setSelectedPage={setSelectedPage}
       />
-      <div className="w-5/6 mx-auto md:h-full">
+      <div className="w-5/6 mx-auto md:h-full relative">
         {isAboveMediumScreens && (
           <DotGroup
             selectedPage={selectedPage}
@@ -38,9 +39,14 @@ function App() {
         <Landing setSelectedPage = {setSelectedPage}/>
       </div>
       <DivSeparator/>
-      <div className="w-5/6 mx-auto md:h-full flex items-center justify-center">
+      <div className="w-5/6 mx-auto md:h-full flex items-center justify-center relative">
         <MySkills />
       </div>
+      <DivSeparator/>
+      {/*Change to "h-full" for "h-auto" when add more projects*/}
+        <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative" >
+          <Projects/>
+        </div>
       <DivSeparator/>
   </div>
   );
