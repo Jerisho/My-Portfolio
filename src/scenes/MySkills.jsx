@@ -8,7 +8,7 @@ import JSlogo from '../assets/JSlogo.png'
 import GITLogo from '../assets/GITlogo.png'
 import { motion } from 'framer-motion'
 import useMediaQuery from '../hooks/useMediaQuery'
-import ContainerDetail from '../components/ContainerDetail'
+import Skill from '../components/Skill'
 
 const MySkills = () => {
   const IsAboutMediumScreen = useMediaQuery("(min-width: 1060px)")
@@ -45,9 +45,9 @@ const MySkills = () => {
                     >
 {/*First line of skills - HTML - CSS3 - JS*/}
             <div className='flex justify-center w-full h-full mb-5 gap-5'>             
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[160px]"} zImg={"z-10"}/>
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[115px]"} zImg={"z-10"}/>           
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={JSlogo} alt="Image_JS" wImg={"w-[140px]"} zImg={"z-10"}/>        
+              <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[160px]"} />
+              <Skill img={CSSlogo} alt="Image_CSS3" wImg={"w-[115px]"} />           
+              <Skill img={JSlogo} alt="Image_JS" wImg={"w-[140px]"} />        
             </div>
             </motion.div>
             <motion.div
@@ -62,9 +62,9 @@ const MySkills = () => {
                     >
 {/*Second line of skills - React - Tailwind - Firebase*/}
              <div className='flex justify-center w-full h-full mb-5 gap-5'>
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={RClogo} alt="Image_REACT" wImg={"w-[150px]"} zImg={"z-10"}/>           
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[150px]"} zImg={"z-10"}/>              
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[80px]"} zImg={"z-10"}/>              
+              <Skill img={RClogo} alt="Image_REACT" wImg={"w-[150px]"} />           
+              <Skill img={TWlogo} alt="Image_TAILWIND" wImg={"w-[150px]"} />              
+              <Skill img={FBlogo} alt="Image_FIREBASE" wImg={"w-[80px]"} />              
             </div>
             </motion.div>
             <motion.div
@@ -79,7 +79,7 @@ const MySkills = () => {
                     >
 {/*Third line of skills - GIT*/}
              <div className='flex justify-center w-full h-full mb-5 gap-5'>
-              <ContainerDetail smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} hover={"hover:shadow-sky-700"} img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} zImg={"z-10"}/>                     
+              <Skill img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} />                     
             </div>
             </motion.div>
           </div> )
@@ -90,13 +90,13 @@ const MySkills = () => {
                   <h2 className='text-6xl'>Skills</h2>
                 </div>
               <div className='flex flex-wrap justify-center gap-7'>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"sm:w-[90px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"sm:w-[110px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"sm:w-[130px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={TWlogo} alt="Image_TAILWIND" wImg={"w-[100px]"} smIMG={"sm:w-[150px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={FBlogo} alt="Image_FIREBASE" wImg={"w-[60px]"} smIMG={"sm:w-[80px]"} zImg={"z-10"}/>
-                <ContainerDetail divW={"w-[120px]"} divH={"h-[120px]"} smW={"sm:w-[200px]"} smH={"sm:h-[200px]"} img={GITLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} zImg={"z-10"}/>
+                <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} />
+                <Skill img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"sm:w-[90px]"} />
+                <Skill img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"sm:w-[110px]"} />
+                <Skill img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"sm:w-[130px]"} />
+                <Skill img={TWlogo} alt="Image_TAILWIND" wImg={"w-[100px]"} smIMG={"sm:w-[150px]"} />
+                <Skill img={FBlogo} alt="Image_FIREBASE" wImg={"w-[60px]"} smIMG={"sm:w-[80px]"} />
+                <Skill img={GITLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} />
               </div>  
             </div>
           )}
