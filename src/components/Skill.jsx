@@ -3,6 +3,7 @@ import useMediaQuery from '../hooks/useMediaQuery'
 
 const Skill = ({ img, alt, wImg, smIMG}) => {
   const IsChangeScreen = useMediaQuery("(min-width: 768px)")
+  
   return (
     <>{IsChangeScreen ? (
         <div className={`flex justify-center items-center w-[120px] h-[120px] sm:w-[200px] sm:h-[200px] z-15 rounded-tl-3xl rounded-br-3xl

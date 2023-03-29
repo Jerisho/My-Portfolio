@@ -5,6 +5,13 @@ import Project from '../components/Project'
 import Project1 from '../assets/Project1.png'
 import Project2 from '../assets/Project2.png'
 import Project3 from '../assets/Project3.png'
+import FBlogo from '../assets/FBlogo.png'
+import RClogo from '../assets/REACTlogo.png'
+import HTMLlogo from '../assets/HTMLlogo.png'
+import CSSlogo from '../assets/CSS3logo.png'
+import TWlogo from '../assets/TWlogo.png'
+import JSlogo from '../assets/JSlogo.png'
+import GITLogo from '../assets/GITlogo.png'
 
 const Projects = () => {
 {/* VER PORQUE NO APARECE EL TITULO PROJECT */}
@@ -40,9 +47,28 @@ const Projects = () => {
                             }}
                         >
                     <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
-                        <Project title={"Lucian Vice - Noticias"}img={Project1} alt="Project_LoL"/>
-                        <Project title={"E-commerce Gamer"}img={Project2} alt="Project_EcommerceJS"/>
-                        <Project title={"Smartphone Store"}img={Project3} alt="Project_EcommerceReact"/>
+                        <Project 
+                            title={"Lucian Vice - Noticias"} 
+                            img={Project1} 
+                            alt="Project_LoL" 
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber"}]}/>
+                        <Project 
+                            title={"E-commerce Gamer"} 
+                            img={Project2} 
+                            alt="Project_EcommerceJS" 
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
+                                        {id: 2, img: `${JSlogo}`, alt: "bg-amber"}]}/>
+                        <Project 
+                            title={"Smartphone Store"} 
+                            img={Project3} 
+                            alt="Project_EcommerceReact" 
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                         {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
+                                         {id: 2, img: `${JSlogo}`, alt: "bg-amber"}, 
+                                         {id: 3, img: `${FBlogo}`, alt: "bg-amber"},
+                                         {id: 4, img: `${RClogo}`, alt: "bg-amber"}]}/>
                     </div>
                 </motion.div> 
             </div> ) 
@@ -52,9 +78,28 @@ const Projects = () => {
                 <h2 className='text-6xl'>Projects</h2>
             </div>               
             <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
-                <Project title={"Lucian Vice - Noticias"} img={Project1} alt="Project_LoL"/>
-                <Project title={"E-commerce Gamer"} img={Project2} alt="Project_EcommerceJS"/>
-                <Project title={"Smartphone Store"} img={Project3} alt="Project_EcommerceReact"/>
+                <Project 
+                    title={"Lucian Vice - Noticias"} 
+                    img={Project1} 
+                    alt="Project_LoL" 
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"}]}/>
+                <Project 
+                    title={"E-commerce Gamer"} 
+                    img={Project2} 
+                    alt="Project_EcommerceJS" 
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
+                                {id: 2, img: `${JSlogo}`, alt: "bg-amber"}]}/>
+                <Project 
+                    title={"Smartphone Store"} 
+                    img={Project3} 
+                    alt="Project_EcommerceReact" 
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
+                                {id: 2, img: `${JSlogo}`, alt: "bg-amber"},
+                                {id: 3, img: `${FBlogo}`, alt: "bg-amber"},
+                                {id: 4, img: `${RClogo}`, alt: "bg-amber"}]}/>
             </div>
             </>)
         }
