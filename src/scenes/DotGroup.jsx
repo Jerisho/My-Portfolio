@@ -25,6 +25,7 @@ const DotGroup = ({ selectedPage, setSelectedPage}) => {
                 className={`${
                     selectedPage === "projects" ? selectedStyles : "bg-dark-grey"}
                     w-3 h-3 rounded-full`}
+                offset="70px"
                 href="#projects" 
                 onClick={() => setSelectedPage("projects")}
             />

@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Tech = ({ img, alt }) => {
+const Tech = ({ img, alt, wd }) => {
   return (
     <>
-      <img className='w-[40px] h-[40px] mx-1' src={`${img}`} alt={`${alt}`} />
+      <img className={`${wd} h-[35px] mx-1`} src={`${img}`} alt={`${alt}`} />
     </>
   )
 }

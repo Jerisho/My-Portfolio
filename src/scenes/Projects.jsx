@@ -19,9 +19,9 @@ const Projects = () => {
 
   return (
     <section id="projects"
-        className='flex flex-col h-auto justify-center items-center mt-[20px] mb-[20px]'>
+        className='flex flex-col h-full justify-center'>
             {IsAboutMediumScreen ? (
-            <div>
+            <>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -29,52 +29,64 @@ const Projects = () => {
                     transition={{ duration: 0.6 }}
                     variants={{
                         hidden: { opacity: 0, x: -100},
-                        visible: { opacity: 1, x: 0}
+                        visible: { opacity: 1, x: 0},
                     }}
+                    className="flex h-[100px] mb-[60px] justify-center items-center 
+                            rounded-tr-3xl rounded-bl-2xl bg-title "
                 >
-                    <div className='flex h-full justify-center mb-12 '>  
+                    <div className='flex h-full justify-center items-center'>  
                         <h2 className='text-6xl'>Projects</h2>
                     </div>
                 </motion.div>
                 <motion.div
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport= {{once: true, amount: 0.8}}
-                            transition={{ duration: 0.8 }}
-                            variants={{
-                                hidden: { opacity: 0, x: -200},
-                                visible: { opacity: 1, x: 0}
-                            }}
-                        >
-                    <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport= {{once: true, amount: 0.8}}
+                    transition={{ duration: 0.8 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -200},
+                        visible: { opacity: 1, x: 0}
+                    }}
+                    className="flex h-4/6 justify-center items-center"
+                >
+                    <div className='flex flex-wrap justify-center items-center w-full h-full mb-5 gap-5'>
                         <Project 
                             title={"Lucian Vice - Noticias"} 
                             img={Project1} 
                             alt="Project_LoL" 
-                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber"}]}/>
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]" },
+                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"}]}/>
                         <Project 
                             title={"E-commerce Gamer"} 
                             img={Project2} 
                             alt="Project_EcommerceJS" 
-                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
-                                        {id: 2, img: `${JSlogo}`, alt: "bg-amber"}]}/>
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                        {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"},
+                                        {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}]}/>
                         <Project 
                             title={"Smartphone Store"} 
                             img={Project3} 
                             alt="Project_EcommerceReact" 
-                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                         {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
-                                         {id: 2, img: `${JSlogo}`, alt: "bg-amber"}, 
-                                         {id: 3, img: `${FBlogo}`, alt: "bg-amber"},
-                                         {id: 4, img: `${RClogo}`, alt: "bg-amber"}]}/>
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                         {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"},
+                                         {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}, 
+                                         {id: 3, img: `${FBlogo}`, alt: "bg-amber", wd: "w-[27px]"},
+                                         {id: 4, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]"}]}/>
+                        <Project 
+                            title={"My Portfolio"} 
+                            img={Project3} 
+                            alt="Project_EcommerceReact" 
+                            technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                         {id: 1, img: `${TWlogo}`, alt: "bg-amber", wd: "w-[30px]"},
+                                         {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}, 
+                                         {id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]"},]}/>
                     </div>
                 </motion.div> 
-            </div> ) 
+            </> ) 
             :  (     
             <>
-            <div className='flex h-full justify-center mb-12 '>  
+            <div className='flex h-[90px] w-full mt-[25px] mb-[30px] justify-center items-center 
+                            rounded-tr-3xl rounded-bl-2xl bg-title '>  
                 <h2 className='text-6xl'>Projects</h2>
             </div>               
             <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
@@ -82,24 +94,32 @@ const Projects = () => {
                     title={"Lucian Vice - Noticias"} 
                     img={Project1} 
                     alt="Project_LoL" 
-                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"}]}/>
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"}]}/>
                 <Project 
                     title={"E-commerce Gamer"} 
                     img={Project2} 
                     alt="Project_EcommerceJS" 
-                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
-                                {id: 2, img: `${JSlogo}`, alt: "bg-amber"}]}/>
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"},
+                                {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}]}/>
                 <Project 
                     title={"Smartphone Store"} 
                     img={Project3} 
                     alt="Project_EcommerceReact" 
-                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber"},
-                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber"},
-                                {id: 2, img: `${JSlogo}`, alt: "bg-amber"},
-                                {id: 3, img: `${FBlogo}`, alt: "bg-amber"},
-                                {id: 4, img: `${RClogo}`, alt: "bg-amber"}]}/>
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                {id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]"},
+                                {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                {id: 3, img: `${FBlogo}`, alt: "bg-amber", wd: "w-[27px]"},
+                                {id: 4, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]"}]}/>
+                <Project                       
+                    title={"My Portfolio"} 
+                    img={Project3} 
+                    alt="Project_EcommerceReact" 
+                    technology={[{id: 0, img: `${HTMLlogo}`, alt: "bg-amber", wd: "w-[35px]"},
+                                {id: 1, img: `${TWlogo}`, alt: "bg-amber", wd: "w-[30px]"},
+                                {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}, 
+                                {id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]"},]}/>
             </div>
             </>)
         }

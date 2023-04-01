@@ -15,34 +15,36 @@ const MySkills = () => {
 
   return (
     <section id="skills"  
-        className='flex flex-col justify-center items-center mt-[20px] mb-[20px]'
+        className='flex flex-col h-full justify-center'
         >
         { IsAboutMediumScreen ? (
-          <div>
+          <>
             <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport= {{once: true, amount: 0.5}}
-                        transition={{ duration: 0.6 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -200},
-                            visible: { opacity: 1, x: 0}
-                        }}
-                    >
-            <div className='flex justify-center mb-12'>  
+              initial="hidden"
+              whileInView="visible"
+              viewport= {{once: true, amount: 0.5}}
+              transition={{ duration: 0.6 }}
+              variants={{
+                  hidden: { opacity: 0, x: -200},
+                  visible: { opacity: 1, x: 0}
+              }}
+              className="flex h-[100px] mb-[60px] justify-center items-center 
+                rounded-tr-3xl rounded-bl-2xl bg-title "
+            >
+            <div className='flex h-full justify-center items-center'>  
                 <h2 className='text-6xl'>Skills</h2>
             </div>
             </motion.div>
             <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport= {{once: true, amount: 0.8}}
-                        transition={{ duration: 0.8 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -200},
-                            visible: { opacity: 1, x: 0}
-                        }}
-                    >
+              initial="hidden"
+              whileInView="visible"
+              viewport= {{once: true, amount: 0.8}}
+              transition={{ duration: 0.8 }}
+              variants={{
+                  hidden: { opacity: 0, x: -200},
+                  visible: { opacity: 1, x: 0}
+              }}
+            >
 {/*First line of skills - HTML - CSS3 - JS*/}
             <div className='flex justify-center w-full h-full mb-5 gap-5'>             
               <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[160px]"} />
@@ -51,15 +53,15 @@ const MySkills = () => {
             </div>
             </motion.div>
             <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport= {{once: true, amount: 0.5}}
-                        transition={{ duration: 1 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -200},
-                            visible: { opacity: 1, x: 0}
-                        }}
-                    >
+              initial="hidden"
+              whileInView="visible"
+              viewport= {{once: true, amount: 0.5}}
+              transition={{ duration: 1 }}
+              variants={{
+                  hidden: { opacity: 0, x: -200},
+                  visible: { opacity: 1, x: 0}
+              }}
+            >
 {/*Second line of skills - React - Tailwind - Firebase*/}
              <div className='flex justify-center w-full h-full mb-5 gap-5'>
               <Skill img={RClogo} alt="Image_REACT" wImg={"w-[150px]"} />           
@@ -68,25 +70,26 @@ const MySkills = () => {
             </div>
             </motion.div>
             <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport= {{once: true, amount: 0.3}}
-                        transition={{ duration: 1.2 }}
-                        variants={{
-                            hidden: { opacity: 0, x: -200},
-                            visible: { opacity: 1, x: 0}
-                        }}
-                    >
+              initial="hidden"
+              whileInView="visible"
+              viewport= {{once: true, amount: 0.3}}
+              transition={{ duration: 1.2 }}
+              variants={{
+                  hidden: { opacity: 0, x: -200},
+                  visible: { opacity: 1, x: 0}
+              }}
+            >
 {/*Third line of skills - GIT*/}
              <div className='flex justify-center w-full h-full mb-5 gap-5'>
               <Skill img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} />                     
             </div>
             </motion.div>
-          </div> )
+          </> )
           : (            
             <div className='flex flex-col items-center'>
 {/*When Not About XS Screen, view skills order HTML, CSS3, JS, REACT, TAILWIND, FIREBASE*/}
-                <div className='flex justify-center mb-12'>  
+                <div className='flex h-[90px] w-full mt-[25px] mb-[30px] justify-center items-center 
+                            rounded-tr-3xl rounded-bl-2xl bg-title'>  
                   <h2 className='text-6xl'>Skills</h2>
                 </div>
               <div className='flex flex-wrap justify-center gap-7'>
