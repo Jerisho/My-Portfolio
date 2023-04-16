@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react';
 import useMediaQuery from './hooks/useMediaQuery';
 import Landing from "./scenes/Landing.jsx";
 import MySkills from "./scenes/MySkills.jsx";
-import DivSeparator from "./components/DivSeparator.jsx";
 import Projects from "./scenes/Projects.jsx";
+import Contact from "./scenes/Contact.jsx";
+import DivSeparator from "./components/DivSeparator.jsx";
+
 
 
 function App() {
@@ -48,6 +50,9 @@ function App() {
           <Projects/>
         </div>
       <DivSeparator/>
+        <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative" >
+          <Contact/>
+        </div>
   </div>
   );
 }

@@ -14,14 +14,15 @@ module.exports = {
         "icon-blue": "#101945",
         "title": "#101948",
         "opaque-black": "rgba(0,0,0,0.35)",
-        "aqua": "#7BFFCD",
+        "aqua": "#7BDD99",
         "azure": "84D8FF",
         "blue": "#2F44A5"
       },
       backgroundImage: (theme) => ({
         "gradient-aquablue":
           "linear-gradient(360deg, rgba(113,255,179,1) 0%, rgba(32,115,255,1) 100%)",
-          'svg': "url('./assets/svg.png')", 
+        'svg': "url('./assets/svg.png')",
+        "imgContact": "url('./assets/contact.jpg')"
       }),
       screens: {
         xs: "480px",
@@ -33,6 +34,10 @@ module.exports = {
       },
       blur: {
         "xs" : "0.7px"
+      },
+      fontFamily: {
+        opensans: ['Open Sans', 'sans-serif'],
+        yellowtail: ['Yellowtail', 'cursive']
       }
   }
   },

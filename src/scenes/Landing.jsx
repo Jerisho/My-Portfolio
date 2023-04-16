@@ -41,13 +41,13 @@ const Landing = ({selectedPage}) => {
                         visible: { opacity: 1, x: 0}
                     }}
                 >
-                    <p className='text-4xl z10 text-center xs:text-6xl md:text-start'>
-                        Jeremias 
-                    <span>
-                        Godoy
+                    <p className='font-opensans text-4xl z10 text-center xs:text-6xl md:text-start'>
+                        Jeremias {""}
+                    <span className='font-opensans'>
+                         Godoy
                     </span>
                     </p>
-                    <p className='mt-10 mb-7 text-sm text-center md:text-start'>
+                    <p className='italic mt-10 mb-7 text-default text-center md:text-start'>
                     Desarrollador Web
                     </p>
                 </motion.div>

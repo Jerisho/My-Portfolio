@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <section id="projects"
-        className='flex flex-col h-full justify-center'>
+        className='flex flex-col h-full justify-center py-[45px]'>
             {IsAboutMediumScreen ? (
             <>
                 <motion.div
@@ -31,11 +31,10 @@ const Projects = () => {
                         hidden: { opacity: 0, x: -100},
                         visible: { opacity: 1, x: 0},
                     }}
-                    className="flex h-[100px] mb-[60px] justify-center items-center 
-                            rounded-tr-3xl rounded-bl-2xl bg-title "
+                    className="flex h-[0.5px] mb-[100px] justify-center items-center border border-aqua border-dashed"
                 >
-                    <div className='flex h-full justify-center items-center'>  
-                        <h2 className='text-6xl'>Projects</h2>
+                    <div className='flex h-full justify-center items-center bg-deep-blue'>  
+                        <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Projects</h2>
                     </div>
                 </motion.div>
                 <motion.div
@@ -85,9 +84,9 @@ const Projects = () => {
             </> ) 
             :  (     
             <>
-            <div className='flex h-[90px] w-full mt-[25px] mb-[30px] justify-center items-center 
-                            rounded-tr-3xl rounded-bl-2xl bg-title '>  
-                <h2 className='text-6xl'>Projects</h2>
+            
+            <div className='flex h-[0.5px]  mt-[25px] mb-[80px] justify-center items-center border border-aqua border-dashed '>  
+                <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Projects</h2>
             </div>               
             <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
                 <Project 

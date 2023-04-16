@@ -13,8 +13,8 @@ const Project = ({ img, alt, title, technology }) => {
         { IsChangeScreen ? (
             <div className={`flex flex-col justify-center items-center w-[400px] h-[290px] z-15 rounded-tl-3xl 
                             rounded-br-3xl bg-icon-blue 
-                            hover:shadow-custom hover:shadow-sky-700 cursor-pointer z-10`}>
-              <h1 className='font-normal text-3xl mb-[4px]'>{title}</h1>
+                            hover:shadow-custom hover:shadow-sky-700 transition duration-500 cursor-pointer z-10`}>
+              <h1 className='font-opensans text-3xl mb-[4px]'>{title}</h1>
               <DivSeparator/>
               <img src={img} alt={alt} className={` w-[500px] blur-xs z-10 mb-[10px]`}></img>
               <div className={"flex flex-row justify-center w-full px-[5px]"}>
@@ -31,7 +31,7 @@ const Project = ({ img, alt, title, technology }) => {
             ) : (
             <div className={`flex flex-col justify-center items-center w-[250px] h-[207x] 
             py-[5px] z-15 rounded-tl-3xl rounded-br-3xl rounded-bl-lg rounded-tr-lg bg-icon-blue`}>
-              <h1 className='font-normal text-2xl mb-[4px]'>{title}</h1>
+              <h1 className='font-opensans text-2xl mb-[4px]'>{title}</h1>
               <DivSeparator/>
               <img src={img} alt={alt} className={`w-[300px] blur-xs z-10 mb-[10px]`}></img>
               <div className={"flex flex-row justify-center w-full px-[5px]"}>

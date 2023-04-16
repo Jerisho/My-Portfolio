@@ -15,7 +15,7 @@ const MySkills = () => {
 
   return (
     <section id="skills"  
-        className='flex flex-col h-full justify-center'
+        className='flex flex-col h-full justify-center py-[45px]'
         >
         { IsAboutMediumScreen ? (
           <>
@@ -28,11 +28,11 @@ const MySkills = () => {
                   hidden: { opacity: 0, x: -200},
                   visible: { opacity: 1, x: 0}
               }}
-              className="flex h-[100px] mb-[60px] justify-center items-center 
-                rounded-tr-3xl rounded-bl-2xl bg-title "
+              className="flex h-[0.5px]  mt-[25px] mb-[80px] justify-center items-center 
+              border border-aqua border-dashed  "
             >
             <div className='flex h-full justify-center items-center'>  
-                <h2 className='text-6xl'>Skills</h2>
+                <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Skills</h2>
             </div>
             </motion.div>
             <motion.div
@@ -88,9 +88,8 @@ const MySkills = () => {
           : (            
             <div className='flex flex-col items-center'>
 {/*When Not About XS Screen, view skills order HTML, CSS3, JS, REACT, TAILWIND, FIREBASE*/}
-                <div className='flex h-[90px] w-full mt-[25px] mb-[30px] justify-center items-center 
-                            rounded-tr-3xl rounded-bl-2xl bg-title'>  
-                  <h2 className='text-6xl'>Skills</h2>
+                <div className='flex h-[0.5px] w-full mt-[25px] mb-[80px] justify-center items-center border border-aqua border-dashed '>  
+                  <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Skills</h2>
                 </div>
               <div className='flex flex-wrap justify-center gap-7'>
                 <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} />
