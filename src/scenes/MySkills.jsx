@@ -23,10 +23,10 @@ const MySkills = () => {
               initial="hidden"
               whileInView="visible"
               viewport= {{once: true, amount: 0.5}}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 1 }}
               variants={{
-                  hidden: { opacity: 0, x: -200},
-                  visible: { opacity: 1, x: 0}
+                  hidden: { opacity: 0, y: 0},
+                  visible: { opacity: 1, y: 0}
               }}
               className="flex h-[0.5px]  mt-[25px] mb-[80px] justify-center items-center 
               border border-aqua border-dashed  "
@@ -58,7 +58,7 @@ const MySkills = () => {
               viewport= {{once: true, amount: 0.5}}
               transition={{ duration: 1 }}
               variants={{
-                  hidden: { opacity: 0, x: -200},
+                  hidden: { opacity: 0, x: 200},
                   visible: { opacity: 1, x: 0}
               }}
             >
@@ -75,8 +75,8 @@ const MySkills = () => {
               viewport= {{once: true, amount: 0.3}}
               transition={{ duration: 1.2 }}
               variants={{
-                  hidden: { opacity: 0, x: -200},
-                  visible: { opacity: 1, x: 0}
+                  hidden: { opacity: 0, y: 100},
+                  visible: { opacity: 1, y: 0}
               }}
             >
 {/*Third line of skills - GIT*/}

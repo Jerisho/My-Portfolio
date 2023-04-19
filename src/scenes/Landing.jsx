@@ -29,7 +29,7 @@ const Landing = ({selectedPage}) => {
             </div>
 
             {/* MAIN SECTION */}
-            <div className='z-30 basis-2/5 mt-12 md:mt-32'>
+            <div className='z-30 basis-2/5 py-5 px-2 mt-12 md:mt-32'>
                 {/* HEADING */}
                 <motion.div
                     initial="hidden"
@@ -40,15 +40,16 @@ const Landing = ({selectedPage}) => {
                         hidden: { opacity: 0, x: -50},
                         visible: { opacity: 1, x: 0}
                     }}
+                    className='border-t-4 border-amber pt-5'
                 >
-                    <p className='font-opensans text-4xl z10 text-center xs:text-6xl md:text-start'>
+                    <p className=' text-4xl z10 text-center xs:text-6xl md:text-start'>
                         Jeremias {""}
-                    <span className='font-opensans'>
+                    <span>
                          Godoy
                     </span>
                     </p>
                     <p className='italic mt-10 mb-7 text-default text-center md:text-start'>
-                    Desarrollador Web
+                    Front End Dev
                     </p>
                 </motion.div>
 
@@ -84,7 +85,6 @@ const Landing = ({selectedPage}) => {
                 </AnchorLink>
                 </motion.div>
                 <motion.div
-                className="flex mt-5 justify-center md:justify-start"
                 initial="hidden"
                 whileInView="visible"
                 viewport= {{once: true, amount: 0.5}}
@@ -93,6 +93,7 @@ const Landing = ({selectedPage}) => {
                     hidden: { opacity: 0, x: -50},
                     visible: { opacity: 1, x: 0}
                 }}
+                className="flex pt-5 justify-center md:justify-start border-b-4 border-amber"
                 >
                 <SocialMediaIcons/>
                 </motion.div>

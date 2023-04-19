@@ -16,22 +16,28 @@ import GITLogo from '../assets/GITlogo.png'
 const Projects = () => {
 {/* VER PORQUE NO APARECE EL TITULO PROJECT */}
     const IsAboutMediumScreen = useMediaQuery("(min-width: 1060px)")
+    const container = {
+        hidden: {},
+        visible: {
+            transition: { staggerChildren: 0.2 }
+        }
+    }
 
   return (
     <section id="projects"
-        className='flex flex-col h-full justify-center py-[45px]'>
+        className='flex flex-col h-full items-center justify-center py-[45px]'>
             {IsAboutMediumScreen ? (
             <>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport= {{once: true, amount: 0.5}}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 1 }}
                     variants={{
-                        hidden: { opacity: 0, x: -100},
+                        hidden: { opacity: 0, x: 0},
                         visible: { opacity: 1, x: 0},
                     }}
-                    className="flex h-[0.5px] mb-[100px] justify-center items-center border border-aqua border-dashed"
+                    className="flex md:w-[640px] h-[0.5px] mb-[100px] justify-center items-center border border-aqua border-dashed"
                 >
                     <div className='flex h-full justify-center items-center bg-deep-blue'>  
                         <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Projects</h2>
@@ -42,10 +48,7 @@ const Projects = () => {
                     whileInView="visible"
                     viewport= {{once: true, amount: 0.8}}
                     transition={{ duration: 0.8 }}
-                    variants={{
-                        hidden: { opacity: 0, x: -200},
-                        visible: { opacity: 1, x: 0}
-                    }}
+                    variants={container}
                     className="flex h-4/6 justify-center items-center"
                 >
                     <div className='flex flex-wrap justify-center items-center w-full h-full mb-5 gap-5'>
@@ -83,12 +86,26 @@ const Projects = () => {
                 </motion.div> 
             </> ) 
             :  (     
-            <>
-            
-            <div className='flex h-[0.5px]  mt-[25px] mb-[80px] justify-center items-center border border-aqua border-dashed '>  
+            <>    
+            <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport= {{once: true, amount: 0.5}}
+                    transition={{ duration: 1 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 0},
+                        visible: { opacity: 1, x: 0},
+                    }} className='flex w-full h-[0.5px]  mt-[25px] mb-[80px] justify-center items-center border border-aqua border-dashed '>  
                 <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Projects</h2>
-            </div>               
-            <div className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
+            </motion.div> 
+            <div>              
+            <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport= {{once: true, amount: 0.4}}
+                    transition={{ duration: 0.8 }}
+                    variants={container}
+                    className='flex flex-wrap justify-center w-full h-full mb-5 gap-5'>
                 <Project 
                     title={"Lucian Vice - Noticias"} 
                     img={Project1} 
@@ -119,6 +136,7 @@ const Projects = () => {
                                 {id: 1, img: `${TWlogo}`, alt: "bg-amber", wd: "w-[30px]"},
                                 {id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]"}, 
                                 {id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]"},]}/>
+            </motion.div>
             </div>
             </>)
         }
