@@ -1,28 +1,53 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import menuIcon from '../assets/menu-icon.svg'
 import closeIcon from '../assets/close-icon.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import useMediaQuery from '../hooks/useMediaQuery';
 
-const Link = ({ page, top, selectedPage, setSelectedPage}) => {
+const Link = ({ page, top, selectedPage, setSelectedPage, isTopOfPage, isAboveSmallScreens}) => {
     const lowerCasePage = page.toLowerCase();
+    const changeColor = () =>{
+        if(isAboveSmallScreens){
+            if (selectedPage === lowerCasePage && isTopOfPage === true){
+                return "text-amber hover:text-orange-600 transition duration-200"
+            }
+            if (selectedPage === lowerCasePage && isTopOfPage === false){
+                return "text-cyan-600 hover:text-orange-600 transition duration-200"
+            }
+            if (selectedPage !== lowerCasePage && isTopOfPage === true){
+                return "text-white hover:text-orange-600 transition duration-200"
+            }
+            if (selectedPage !== lowerCasePage && isTopOfPage === false){
+                return "hover:text-orange-600 transition duration-200"
+            }
+        }
+        else{
+            if (selectedPage === lowerCasePage && isTopOfPage === true){
+                return "text-cyan-600"
+            }
+            if (selectedPage === lowerCasePage && isTopOfPage === false){
+                return "text-cyan-600"
+            }
+        }
+    }
     return (
+
         <AnchorLink
-        className={`${
-            selectedPage === lowerCasePage ? "text-amber" : ""}
-            hover:text-orange-600 transition duration-500`}
         offset = {`${top}`}
         href={`#${lowerCasePage}`} 
-        onClick={() => setSelectedPage(lowerCasePage)}
+        onClick={() => {
+            setSelectedPage(lowerCasePage)
+            
+        }}
         >
-            {page}
+           <p className={`${changeColor()} ${isAboveSmallScreens ? "text-xl" : "textl"}`}> {page} </p>
         </AnchorLink>
     )
 }
 const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isAboveSmallScreens = useMediaQuery("(min-width:786px)");
-    const navbarBackground = isTopOfPage ? "" : "bg-amber text-deep-blue";
+    const navbarBackground = isTopOfPage ? "" : "bg-amber text-deep-blue ";
 
     return (
         <nav className={`${navbarBackground} z-40 w-full fixed top-0 py-6`}>
@@ -36,24 +61,40 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
                             page="Home"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
+                            isTopOfPage={isTopOfPage}
+                            isAboveSmallScreens={isAboveSmallScreens}
                         />
                         <Link
                             page="Skills"
-                            top="100px"
+                            top="80px"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
+                            isTopOfPage={isTopOfPage}
+                            isAboveSmallScreens={isAboveSmallScreens}
                         />
                         <Link
                             page="Projects"
                             top="70px"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
-                        />
+                            isTopOfPage={isTopOfPage} 
+                            isAboveSmallScreens={isAboveSmallScreens}
+                            />
+                        <Link
+                            page="Certificates"
+                            top="80px"
+                            selectedPage={selectedPage}
+                            setSelectedPage={setSelectedPage}
+                            isTopOfPage={isTopOfPage}    
+                            isAboveSmallScreens={isAboveSmallScreens}
+                            />
                         <Link
                             page="Contact"
                             top="80px"
                             selectedPage={selectedPage}
                             setSelectedPage={setSelectedPage}
+                            isTopOfPage={isTopOfPage} 
+                            isAboveSmallScreens={isAboveSmallScreens}   
                         />
                     </div>
                 ) : (
@@ -69,36 +110,55 @@ const Navbar = ({isTopOfPage, selectedPage, setSelectedPage}) => {
 
                 {/* MOBILE MENU POPUP */}
                 {!isAboveSmallScreens && isMenuToggled && (
-                    <div className='fixed right-0 bottom-0 h-full bg-blue w-[300px]'>
+                    <div className='fixed right-[-1px] bottom-0 h-full bg-amber w-[300px]'>
                         {/* CLOSE ICON */}
-                        <div className='flex justify-end p-12'>
-                            <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                        <div className='flex justify-end p-[20px]'>
+                            <button className='pt-[13px] pr-[46px]' onClick={() => setIsMenuToggled(!isMenuToggled)}>
 
                             <img src={closeIcon} alt="" />
 
                             </button>
                         </div>
                         {/* MENU ITEMS */}
-                        <div className='flex flex-col gap-10 ml-[33%] text-2xl font-bold text-deep-blue'>
+                        <div className='flex flex-col gap-10 w-auto ml-[33%] text-center text-2xl font-bold text-deep-blue'>
                             <Link
                                 page="Home"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
+                                isAboveSmallScreens={isAboveSmallScreens}
                             />
                             <Link
                                 page="Skills"
+                                top="80px"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
+                                isAboveSmallScreens={isAboveSmallScreens}
                             />
                             <Link
                                 page="Projects"
+                                top="70px"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
+                                isAboveSmallScreens={isAboveSmallScreens}
+                            />
+                            <Link
+                                page="Certificates"
+                                top="80px"
+                                selectedPage={selectedPage}
+                                setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
+                                isAboveSmallScreens={isAboveSmallScreens}
                             />
                             <Link
                                 page="Contact"
+                                top="80px"
                                 selectedPage={selectedPage}
                                 setSelectedPage={setSelectedPage}
+                                isTopOfPage={isTopOfPage}
+                                isAboveSmallScreens={isAboveSmallScreens}
                             />
                         </div>
                     </div>

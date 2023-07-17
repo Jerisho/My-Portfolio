@@ -3,7 +3,7 @@ import useMediaQuery from '../hooks/useMediaQuery'
 import Tech from './Tech'
 import DivSeparator from './DivSeparator'
 import { motion } from 'framer-motion'
-const Project = ({ img, alt, title, technology }) => {
+const Project = ({ img, alt, title, technology, detail }) => {
   const [tech, setTech] = useState([])
   const variant = {
     hidden: { opacity: 0, scale: 0.8 },
@@ -18,7 +18,7 @@ const Project = ({ img, alt, title, technology }) => {
         <>
           <motion.div
             variants= {variant }
-            className={`flex flex-col justify-center items-center w-[400px] h-[290px] z-15 rounded-tl-3xl 
+            className={`flex flex-col justify-center items-center w-[325px] h-[250px] xs:w-[400px] xs:h-[290px] z-15 rounded-tl-3xl 
                             rounded-br-3xl bg-icon-blue 
                             hover:shadow-custom hover:shadow-sky-700 transition duration-500 cursor-pointer z-10`}>
               <h1 className='font-opensans text-3xl mb-[4px]'>{title}</h1>
@@ -26,7 +26,7 @@ const Project = ({ img, alt, title, technology }) => {
               <div className='relative w-full h-full'>
                 <div className='absolute h-full w-full opacity-0 hover:opacity-90 transition duration-500
                 bg-grey z-30 flex felx-col justify-center items-center '>
-                  <p>Este proyecto es una pagina de noticias de League of Legends</p>
+                  <p>{detail}</p>
                 </div>
                 <img src={img} alt={alt} className={`relative w-[500px] blur-xs`}></img>
 

@@ -6,6 +6,8 @@ import CSSlogo from '../assets/CSS3logo.png'
 import TWlogo from '../assets/TWlogo.png'
 import JSlogo from '../assets/JSlogo.png'
 import GITLogo from '../assets/GITlogo.png'
+import MongoDBLogo from '../assets/MongoDBLogo.png'
+import NodeLogo from '../assets/NodeLogo.png'
 import { motion } from 'framer-motion'
 import useMediaQuery from '../hooks/useMediaQuery'
 import Skill from '../components/Skill'
@@ -73,7 +75,7 @@ const MySkills = () => {
               initial="hidden"
               whileInView="visible"
               viewport= {{once: true, amount: 0.3}}
-              transition={{ duration: 1.2 }}
+              transition={{ duration: 0.8 }}
               variants={{
                   hidden: { opacity: 0, y: 100},
                   visible: { opacity: 1, y: 0}
@@ -81,7 +83,9 @@ const MySkills = () => {
             >
 {/*Third line of skills - GIT*/}
              <div className='flex justify-center w-full h-full mb-5 gap-5'>
-              <Skill img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} />                     
+              <Skill img={NodeLogo} alt="Image_REACT" wImg={"w-[150px]"} />  
+              <Skill img={GITLogo} alt="Image_REACT" wImg={"w-[150px]"} />     
+              <Skill img={MongoDBLogo} alt="Image_REACT" wImg={"w-[150px]"} />    
             </div>
             </motion.div>
           </> )
@@ -89,17 +93,27 @@ const MySkills = () => {
             <div className='flex flex-col items-center'>
 {/*When Not About XS Screen, view skills order HTML, CSS3, JS, REACT, TAILWIND, FIREBASE*/}
                 <div className='flex h-[0.5px] w-full mt-[25px] mb-[80px] justify-center items-center border border-aqua border-dashed '>  
-                  <h2 className='font-yellowtail text-6xl px-[20px] pr-[30px] bg-deep-blue'>Skills</h2>
+                  <h2 className='font-yellowtail text-5xl px-[20px] pr-[30px] bg-deep-blue'>Skills</h2>
                 </div>
-              <div className='flex flex-wrap justify-center gap-7'>
-                <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} />
-                <Skill img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"sm:w-[90px]"} />
-                <Skill img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"sm:w-[110px]"} />
-                <Skill img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"sm:w-[130px]"} />
-                <Skill img={TWlogo} alt="Image_TAILWIND" wImg={"w-[100px]"} smIMG={"sm:w-[150px]"} />
-                <Skill img={FBlogo} alt="Image_FIREBASE" wImg={"w-[60px]"} smIMG={"sm:w-[80px]"} />
-                <Skill img={GITLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} />
-              </div>  
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport= {{once: true, amount: 0.3}}
+                  transition={{ duration: 0.7}}
+                  variants={{
+                      hidden: { opacity: 0, scale: 0.2},
+                      visible: { opacity: 1, scale: 1}
+                  }} className='flex flex-wrap justify-center gap-7'>
+                    <Skill img={HTMLlogo} alt="Image_HTML" wImg={"w-[80px]"} smIMG={"sm:w-[120px]"} />
+                    <Skill img={CSSlogo} alt="Image_CSS3" wImg={"w-[55px]"} smIMG={"sm:w-[90px]"} />
+                    <Skill img={JSlogo} alt="Image_JS" wImg={"w-[70px]"} smIMG={"sm:w-[110px]"} />
+                    <Skill img={RClogo} alt="Image_REACT" wImg={"w-[75px]"} smIMG={"sm:w-[130px]"} />
+                    <Skill img={TWlogo} alt="Image_TAILWIND" wImg={"w-[100px]"} smIMG={"sm:w-[150px]"} />
+                    <Skill img={FBlogo} alt="Image_FIREBASE" wImg={"w-[60px]"} smIMG={"sm:w-[80px]"} />
+                    <Skill img={NodeLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} />
+                    <Skill img={GITLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} />
+                    <Skill img={MongoDBLogo} alt="Image_FIREBASE" wImg={"w-[90px]"} smIMG={"sm:w-[130px]"} />
+               </motion.div>  
             </div>
           )}
     </section>

@@ -7,6 +7,8 @@ import MySkills from "./scenes/MySkills.jsx";
 import Projects from "./scenes/Projects.jsx";
 import Contact from "./scenes/Contact.jsx";
 import DivSeparator from "./components/DivSeparator.jsx";
+import Certificates from "./scenes/Certificates.jsx";
+import Footer from "./scenes/Footer.jsx";
 
 
 
@@ -25,7 +27,7 @@ function App() {
   }, [])
   
   return ( 
-  <div className="app bg-deep-blue">
+  <div className="app bg-deep-blue ">
     <NavBar 
       isTopOfPage={isTopOfPage}
       selectedPage={selectedPage} 
@@ -50,8 +52,15 @@ function App() {
           <Projects/>
         </div>
       <DivSeparator/>
+      <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative">
+        <Certificates/>
+      </div>
+      <DivSeparator/>
         <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative" >
           <Contact/>
+        </div>
+        <div className="w-6/6 mx-auto  md:m-full flex items-center justify-center relative  bg-opaque-black" >
+          <Footer/>
         </div>
   </div>
   );

@@ -19,8 +19,8 @@ const Contact = () => {
         {/* HEADING */}
         <div className='flex text-center items-center h-[68px] flex-col mt-[30px] mb-[60px] md:text-start relative'>
             <div className='flex text-center items-center w-[240px] md:[400px] h-[68px] flex-col md:text-start relative'>
-                <p className='font-yellowtail text-3xl sm:text-6xl text-bold w-[200px] sm:w-[245px] sm:left-[-145px] bg-deep-blue absolute z-30'>Contact Me</p>
-                <div className='w-[313px] md:w-[440px] h-[48px] border-dotted border-2 border-aqua top-[18px] sm:top-[30px] absolute z-20'></div>
+                <p className='font-yellowtail text-5xl sm:text-6xl text-bold w-[200px] sm:w-[245px] sm:left-[-145px] bg-deep-blue absolute z-30'>Contact Me</p>
+                    <div className='w-[313px] md:w-[440px] h-[48px] border-dotted border-2 border-aqua top-[18px] sm:top-[30px] absolute z-20'></div>
                 <p className='font-opensans italic text-s sm:text-l w-[180px] sm:w-[190px] sm:px-[5px] top-[63px] sm:left-[178px]  bg-deep-blue absolute z-30 '>You are can contact me</p>
             </div>
         </div>

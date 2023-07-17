@@ -4,6 +4,7 @@ import photoProfile from '../assets/profile.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import useMediaQuery from '../hooks/useMediaQuery'
 import SocialMediaIcons from '../components/SocialMediaIcons'
+import { BsDownload } from 'react-icons/bs'
 
 const Landing = ({selectedPage}) => {
     const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
@@ -67,22 +68,22 @@ const Landing = ({selectedPage}) => {
                 >
                 <AnchorLink
                     className='bg-amber text-deep-blue rounder-sm py-3 px-7 font-semibold
-                        hover:text-white transition duration-500'
+                        hover:text-white transition duration-500 text-center'
                     onClick={() => selectedPage("contact")}
                     href="#contact">
                     Contact Me
                 </AnchorLink>
-                <AnchorLink
-                    className='rounded-r-sm bg-amber py-0.5 pr-0.5'
-                    onClick={() => selectedPage("contact")}
-                    href="#contact">
+                <div
+                    className='rounded-r-sm bg-amber py-0.5 pr-0.5'>
                     <div
                         className='bg-deep-blue hover:text-amber transition duration-500 w-full h-full flex
                         items-center justify-center px-10'    
                     >
-                        Let's talk.
+                        <a href={process.env.PUBLIC_URL + '/CV_Jeremias_Godoy.pdf'} download className='flex w-auto text-center'>
+                             Download CV <BsDownload className='text-xl ml-[10px]'/>
+                        </a>
                     </div>
-                </AnchorLink>
+                </div>
                 </motion.div>
                 <motion.div
                 initial="hidden"
