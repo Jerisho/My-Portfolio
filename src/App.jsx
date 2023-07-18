@@ -43,20 +43,20 @@ function App() {
         <Landing setSelectedPage = {setSelectedPage}/>
       </div>
       <DivSeparator/>
-      <div className="w-5/6 mx-auto md:h-full flex items-center justify-center relative">
+      <div className="w-5/6 mx-auto md:min-h-full flex items-center justify-center relative">
         <MySkills />
       </div>
       <DivSeparator/>
       {/*Change to "h-full" for "h-auto" when add more projects*/}
-        <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative" >
+        <div className="w-5/6 mx-auto  md:min-h-full flex items-center justify-center relative" >
           <Projects/>
         </div>
       <DivSeparator/>
-      <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative">
+      <div className="w-5/6 mx-auto  md:min-h-full flex items-center justify-center relative">
         <Certificates/>
       </div>
       <DivSeparator/>
-        <div className="w-5/6 mx-auto  md:h-full flex items-center justify-center relative" >
+        <div className="w-5/6 mx-auto  md:min-h-full flex items-center justify-center relative" >
           <Contact/>
         </div>
         <div className="w-6/6 mx-auto  md:m-full flex items-center justify-center relative  bg-opaque-black" >

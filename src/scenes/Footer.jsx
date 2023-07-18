@@ -7,10 +7,13 @@ const Footer = () => {
 
 
     return (
-        <div className='w-5/6'>
+        <div className='w-5/6 flex flex-row items-center justify-center'>
           <SocialMediIcons/>
-          <div className='w-[40px]'>
-            <p className='text-white text-xl'>Thanks for watching</p>
+          <div className='w-5/6'>
+            <p className='text-center text-xl text-white'>Thanks for watching 👍</p>
+          </div>
+          <div className='w-1/6'>
+            <p>I see you 👀</p>
           </div>
         </div>
     )

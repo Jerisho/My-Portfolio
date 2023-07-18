@@ -11,7 +11,6 @@ import HTMLlogo from '../assets/HTMLlogo.png'
 import CSSlogo from '../assets/CSS3logo.png'
 import TWlogo from '../assets/TWlogo.png'
 import JSlogo from '../assets/JSlogo.png'
-import GITLogo from '../assets/GITlogo.png'
 
 const Projects = () => {
 

@@ -1,8 +1,0 @@
-Npm install :
-npx create-react-app
-
-npm npm install -D tailwindcss
-
-npm i framer-motion
-
-npm i react-anchor-link-smooth-scroll
