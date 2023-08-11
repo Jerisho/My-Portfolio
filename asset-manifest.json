@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/My-Portfolio/static/css/main.0916c582.css",
+    "main.js": "/My-Portfolio/static/js/main.b1ab607f.js",
+    "static/media/Project1.png": "/My-Portfolio/static/media/Project1.cd929d974c77f2e86f83.png",
+    "static/media/CNode.png": "/My-Portfolio/static/media/CNode.caa00a559b31b5941b3f.png",
+    "static/media/CReact.png": "/My-Portfolio/static/media/CReact.5e0d7661a5cca0c07a78.png",
+    "static/media/Project4.png": "/My-Portfolio/static/media/Project4.7bddf894bc7753eeaff8.png",
+    "static/media/Project3.png": "/My-Portfolio/static/media/Project3.8e6d9be546ab0cb1548d.png",
+    "static/media/CJs.png": "/My-Portfolio/static/media/CJs.4fb89357d8fa79f893f5.png",
+    "static/media/MongoDBLogo.png": "/My-Portfolio/static/media/MongoDBLogo.26cea863f7eb0dc9f80c.png",
+    "static/media/profile.png": "/My-Portfolio/static/media/profile.93e6e9537e4277b8bd81.png",
+    "static/media/svg.png": "/My-Portfolio/static/media/svg.f060209deffb1b026ebc.png",
+    "static/media/contact.jpg": "/My-Portfolio/static/media/contact.5ad6845eac09c12b0bbf.jpg",
+    "static/media/Project2.png": "/My-Portfolio/static/media/Project2.ddcba778c0e40e836590.png",
+    "static/media/REACTlogo.png": "/My-Portfolio/static/media/REACTlogo.25803af39958a2cb9df1.png",
+    "static/media/CSS3logo.png": "/My-Portfolio/static/media/CSS3logo.71afd8d89f5b78bb587b.png",
+    "static/media/HTMLlogo.png": "/My-Portfolio/static/media/HTMLlogo.50743994c18ee0b00ee9.png",
+    "static/media/TWlogo.png": "/My-Portfolio/static/media/TWlogo.46d61abb086e8a8bd39e.png",
+    "static/media/JSlogo.png": "/My-Portfolio/static/media/JSlogo.d9e5fd3fcc38c5939451.png",
+    "static/media/NodeLogo.png": "/My-Portfolio/static/media/NodeLogo.8564fe354af32d511cd3.png",
+    "index.html": "/My-Portfolio/index.html",
+    "static/media/close-icon.svg": "/My-Portfolio/static/media/close-icon.36a1df96f812b5f4c12f817f90a904c6.svg",
+    "static/media/menu-icon.svg": "/My-Portfolio/static/media/menu-icon.e574f36b7d7842f3b97bc3c0c5f39ccc.svg",
+    "main.0916c582.css.map": "/My-Portfolio/static/css/main.0916c582.css.map",
+    "main.b1ab607f.js.map": "/My-Portfolio/static/js/main.b1ab607f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0916c582.css",
+    "static/js/main.b1ab607f.js"
+  ]
+}
