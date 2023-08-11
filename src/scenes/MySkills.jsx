@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import FBlogo from '../assets/FBlogo.png'
 import RClogo from '../assets/REACTlogo.png'
 import HTMLlogo from '../assets/HTMLlogo.png'
@@ -11,13 +11,16 @@ import NodeLogo from '../assets/NodeLogo.png'
 import { motion } from 'framer-motion'
 import useMediaQuery from '../hooks/useMediaQuery'
 import Skill from '../components/Skill'
+import useObserver from '../hooks/useObserver'
+
 
 const MySkills = () => {
   const IsAboutMediumScreen = useMediaQuery("(min-width: 1060px)")
-
+ 
   return (
-    <section id="skills"  
-        className='flex flex-col h-full justify-center py-[45px]'
+    <section id="skills" 
+
+    className='flex flex-col h-full justify-center py-[45px]'
         >
         { IsAboutMediumScreen ? (
           <>

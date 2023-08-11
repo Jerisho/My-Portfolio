@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Certificate from '../components/Certificate'
 import CJs from '../assets/CJs.png'
 import CReact from '../assets/CReact.png'
 import CNode from '../assets/CNode.png'
+import useObserver from '../hooks/useObserver'
 const Certificates = () => {
     const [selectedCer, setSelectedCer] = useState(false)
     const [isModalActive, setIsModalActive] = useState(false)
@@ -19,7 +20,7 @@ const Certificates = () => {
 
     return (
         <section id='certificates' 
-        className='flex flex-col h-full items-center justify-center py-[45px]'>
+            className='flex flex-col h-full items-center justify-center py-[45px]'>
             <motion.div
                 initial="hidden"
                 whileInView="visible"
