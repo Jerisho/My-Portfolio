@@ -117,7 +117,7 @@ const Projects = () => {
 								title={"My Portfolio"}
 								img={Project4}
 								alt="Project_EcommerceReact"
-								link="x"
+								link="#"
 								technology={[
 									{
 										id: 0,
@@ -166,6 +166,7 @@ const Projects = () => {
 								title={"Lucian Vice - Noticias"}
 								img={Project1}
 								alt="Project_LoL"
+								link="https://jerisho.github.io/HTML-CSS-LOL-PAGE-VICE/"
 								technology={[
 									{
 										id: 0,
@@ -175,11 +176,15 @@ const Projects = () => {
 									},
 									{ id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]" },
 								]}
+								detail={
+									"This is my first project. Is a League of Legends news portal. His was make with tech HTML and CSS."
+								}
 							/>
 							<Project
 								title={"E-commerce Gamer"}
 								img={Project2}
 								alt="Project_EcommerceJS"
+								link="https://jerisho.github.io/E-commerce-manual-automatic/"
 								technology={[
 									{
 										id: 0,
@@ -190,11 +195,15 @@ const Projects = () => {
 									{ id: 1, img: `${CSSlogo}`, alt: "bg-amber", wd: "w-[25px]" },
 									{ id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]" },
 								]}
+								detail={
+									"My second project is an e-commerce. My first experience with used Javascript. I used function, jquery, localstorage, arrays, in others methods and functions."
+								}
 							/>
 							<Project
 								title={"Smartphone Store"}
 								img={Project3}
 								alt="Project_EcommerceReact"
+								link="https://jerisho.github.io/Ecommerce-REACT/"
 								technology={[
 									{
 										id: 0,
@@ -207,11 +216,15 @@ const Projects = () => {
 									{ id: 3, img: `${FBlogo}`, alt: "bg-amber", wd: "w-[27px]" },
 									{ id: 4, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]" },
 								]}
+								detail={
+									"My third project is another e-commerce. My first experience with React and Firebase. In this case is about for Smartphone Store."
+								}
 							/>
 							<Project
 								title={"My Portfolio"}
 								img={Project3}
 								alt="Project_EcommerceReact"
+								link="#"
 								technology={[
 									{
 										id: 0,
@@ -223,6 +236,9 @@ const Projects = () => {
 									{ id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]" },
 									{ id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]" },
 								]}
+								detail={
+									"My fourth project is my portfolio created using Tailwaind, JS and React"
+								}
 							/>
 						</motion.div>
 					</div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import useMediaQuery from "../hooks/useMediaQuery";
 import Tech from "./Tech";
 import DivSeparator from "./DivSeparator";
 import { motion } from "framer-motion";
@@ -24,7 +23,7 @@ const Project = ({ img, alt, title, technology, detail, link }) => {
 			>
 				<h1 className="font-opensans text-3xl mt-[4px] mb-[4px]">{title}</h1>
 				<DivSeparator />
-				<a href={link} target="_blank">
+				<a href={link} target="_blank ">
 					<div className="relative w-full h-full">
 						<div
 							className="absolute h-full w-full px-[5px] opacity-0 hover:opacity-90 transition duration-500
