@@ -5,12 +5,10 @@ import Project from "../components/Project";
 import Project1 from "../assets/Project1.png";
 import Project2 from "../assets/Project2.png";
 import Project3 from "../assets/Project3.png";
-import Project4 from "../assets/Project4.png";
 import FBlogo from "../assets/FBlogo.png";
 import RClogo from "../assets/REACTlogo.png";
 import HTMLlogo from "../assets/HTMLlogo.png";
 import CSSlogo from "../assets/CSS3logo.png";
-import TWlogo from "../assets/TWlogo.png";
 import JSlogo from "../assets/JSlogo.png";
 
 const Projects = () => {
@@ -113,26 +111,6 @@ const Projects = () => {
 									"My third project is another e-commerce. My first experience with React and Firebase. In this case is about for Smartphone Store."
 								}
 							/>
-							<Project
-								title={"My Portfolio"}
-								img={Project4}
-								alt="Project_EcommerceReact"
-								link="#"
-								technology={[
-									{
-										id: 0,
-										img: `${HTMLlogo}`,
-										alt: "bg-amber",
-										wd: "w-[35px]",
-									},
-									{ id: 1, img: `${TWlogo}`, alt: "bg-amber", wd: "w-[30px]" },
-									{ id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]" },
-									{ id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]" },
-								]}
-								detail={
-									"My fourth project is my portfolio created using Tailwaind, JS and React"
-								}
-							/>
 						</div>
 					</motion.div>
 				</>
@@ -218,26 +196,6 @@ const Projects = () => {
 								]}
 								detail={
 									"My third project is another e-commerce. My first experience with React and Firebase. In this case is about for Smartphone Store."
-								}
-							/>
-							<Project
-								title={"My Portfolio"}
-								img={Project3}
-								alt="Project_EcommerceReact"
-								link="#"
-								technology={[
-									{
-										id: 0,
-										img: `${HTMLlogo}`,
-										alt: "bg-amber",
-										wd: "w-[35px]",
-									},
-									{ id: 1, img: `${TWlogo}`, alt: "bg-amber", wd: "w-[30px]" },
-									{ id: 2, img: `${JSlogo}`, alt: "bg-amber", wd: "w-[35px]" },
-									{ id: 3, img: `${RClogo}`, alt: "bg-amber", wd: "w-[40px]" },
-								]}
-								detail={
-									"My fourth project is my portfolio created using Tailwaind, JS and React"
 								}
 							/>
 						</motion.div>
